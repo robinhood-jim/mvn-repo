@@ -384,8 +384,6 @@
                     </altDeploymentRepository>
                 </configuration>
             </plugin>
-
-
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
@@ -393,17 +391,13 @@
                 <configuration>
                     <message >Maven artifacts for ${project.version}</message>
                     <noJekyll>true</noJekyll>
-
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-
                     <branch>refs/heads/main</branch>
                     <merge>true</merge>
                     <includes>
                         <include>**/*</include>
                     </includes>
-
                     <repositoryName>mvn-repo</repositoryName>
-
                     <repositoryOwner>robinhood-jim</repositoryOwner>
                     <server>github</server>
                 </configuration>
